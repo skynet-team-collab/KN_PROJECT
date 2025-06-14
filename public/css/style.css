@@ -1,0 +1,171 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url('../images/kedarnath.png'); /* Ensure correct path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    font-family:"Rubik", sans-serif;
+}
+
+p {
+    font-family:"Rubik", sans-serif;
+    text-align: justify;
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.6);
+    min-height: 80vh;
+    z-index: -999;
+}
+
+
+.content h2 {
+  transition: font-size 0.1s ease-in-out;
+}
+
+.logo {
+    float: left;
+}
+
+.nav-links {
+    float: right;
+    margin-top: 5px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 5px 10px;
+  }
+}
+
+
+.images_all {
+  width: 800px;
+  height: auto;
+  max-width: 600px; 
+  display: block;
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 600px) {
+  .images_all {
+    max-width: 100%;
+  }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropbtn:hover {
+  transform: scale(1.2);
+}
+
+.dropbtn:focus {
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+
+/* .dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+} */
+
+.dropdown-content a {
+    font-size: 10px;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    transform: scale(1.2);
+}
+
+/* 
+.dropdown-content a:hover {
+    background-color: #333;
+} */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
