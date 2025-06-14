@@ -13,3 +13,11 @@ Route::get('/owner', function() {
 Route::get('/mule', function() {
     return view(('mule'));
 });
+
+Route::get('/part', function() {
+    return ('Hello');
+});
+
+Route::post('/part', function() {
+    return ('Hello');
+});
