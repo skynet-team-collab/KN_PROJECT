@@ -1,8 +1,15 @@
+# Log files
 *.log
+
+# macOS system file
 .DS_Store
+
+# Environment files
 .env
 .env.backup
 .env.production
+
+# IDE/editor configs
 .phpactor.json
 .phpunit.result.cache
 /.fleet
@@ -11,14 +18,32 @@
 /.phpunit.cache
 /.vscode
 /.zed
+
+# Composer auth file
 /auth.json
+
+# Node modules (npm packages)
 /node_modules
+
+# Build and hot reload files (Vite/Webpack)
 /public/build
 /public/hot
+
+# Public storage symlink (created via artisan storage:link)
 /public/storage
+
+# Private keys
 /storage/*.key
+
+# Custom storage folder
 /storage/pail
+
+# Vendor folder (Composer packages)
 /vendor
+
+# Homestead files (if using Laravel Homestead)
 Homestead.json
 Homestead.yaml
+
+# Windows system file
 Thumbs.db
