@@ -38,9 +38,6 @@
 # Custom storage folder
 /storage/pail
 
-# Vendor folder (Composer packages)
-/vendor
-
 # Homestead files (if using Laravel Homestead)
 Homestead.json
 Homestead.yaml
