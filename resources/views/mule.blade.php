@@ -1,23 +1,25 @@
 @extends('layouts.mule_reg')
 
 @section('content')
+
 <div class="form-container">
-<h2>Mule Registration</h2>
-  
-  <form id="muleOwnerForm">
-    <label for="name">Mule Name (Optional):</label>
-    <input type="text" id="name" required>
+    <h2>Mule Registration</h2>
 
-    <label for="name">Age:</label>
-    <input type="text" id="name" required>
+    @if(session('error'))
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
 
-    <label for="name">Owner name:</label>
-    <input type="text" id="name" required>
+    <form action="{{ route('mule.submit') }}" method="POST">
+        @csrf
 
-    <label for="Health_cer">Health certificate:</label>
-    <input type="file" id="Health_cer" accept="image/*" required>
+        <label for="mule_count">How many mules do you own?</label>
+        <input type="number" name="mule_count" id="mule_count" min="1" max="10" required>
 
-    <button type="submit" class="btn">Submit</button>
-  </form>
+        <button type="button" onclick="generateMuleFields()">Add Mule Details</button>
+
+        <div id="mule-fields"></div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
 </div>
 @endsection
