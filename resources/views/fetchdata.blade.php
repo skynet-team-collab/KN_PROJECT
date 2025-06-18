@@ -29,6 +29,7 @@
         <thead class="table-dark">
         <tr>
             <th>ID</th>
+            <th>Unique Id</th>
             <th>Name</th>
             <th>Age</th>
             <th>Address</th>
@@ -41,6 +42,7 @@
         @foreach($mule_owners as $owner)
             <tr>
                 <td>{{ $owner->id }}</td>
+                <td>{{ $owner->owner_id }}</td>
                 <td>{{ $owner->name }}</td>
                 <td>{{ $owner->age }}</td>
                 <td>{{ $owner->address }}</td>
@@ -59,16 +61,16 @@
                         <table class="table table-sm table-striped">
                             <thead>
                             <tr>
+                                <th>Unique Id</th>
                                 <th>Name</th>
-                                <th>Breed</th>
                                 <th>Age</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($mules_by_owner[$owner->id] as $mule)
                                 <tr>
+                                    <td>{{ $mule->mule_id }}</td>
                                     <td>{{ $mule->name }}</td>
-                                    <td>{{ $mule->breed }}</td>
                                     <td>{{ $mule->age }}</td>
                                 </tr>
                             @endforeach

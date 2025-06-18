@@ -13,21 +13,20 @@ return new class extends Migration
     {
         Schema::create('mule_owners', function (Blueprint $table) {
             $table->id();
+            $table->string('owner_id', 7)->unique();
             $table->string('name');
             $table->integer('age');
             $table->text('address');
-            $table->string('photo_path')->nullable(); 
+            $table->string('photo_path')->nullable();
             $table->string('aadhaar_number')->unique();
-            $table->string('webcam_photo')->nullable(); 
+            $table->string('webcam_photo')->nullable();
             $table->string('police_verification_path')->nullable();
             $table->string('mobile_number');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('mule_owners');

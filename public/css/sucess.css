@@ -24,7 +24,8 @@ body {
 h4 {
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: greenyellow;
+    color: green;
+    font-size: 20px;
 }
 
 p {

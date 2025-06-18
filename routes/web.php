@@ -12,12 +12,10 @@ Route::get('/register', function() {
 });
 
 // Route for owner registration
-
 Route::get('/register/owner', [MuleOwnerController::class, 'createOwner'])->name('mule.owner.form');
 Route::post('/register/owner/next', [MuleOwnerController::class, 'storeOwnerInSession'])->name('mule.owner.next');
 
 // Route for Mule registration
-
 Route::get('/register/mule', [MuleOwnerController::class, 'createMule'])->name('mule.form');
 Route::post('/register/mule/submit', [MuleOwnerController::class, 'storeMuleAndOwner'])->name('mule.submit');
 
@@ -28,8 +26,6 @@ Route::get('/register/success', function () {
 })->name('success.page');
 
 // route for table
-
 Route::get('/mule-owners', [MuleOwnerController::class, 'showOwners'])->name('owners.list');
 
 Route::get('/fetch-owners', [MuleOwnerController::class, 'showOwners'])->name('fetch.owners');
-

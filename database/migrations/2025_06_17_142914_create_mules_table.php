@@ -9,13 +9,12 @@ return new class extends Migration {
     {
         Schema::create('mules', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('owner_id');
+            $table->string('mule_id', 11)->unique();
+            $table->foreignId('owner_id')->constrained('mule_owners')->onDelete('cascade');
             $table->string('name');
-            $table->string('breed');
             $table->integer('age');
             $table->timestamps();
-
-            $table->foreign('owner_id')->references('id')->on('mule_owners')->onDelete('cascade');
+            $table->index('owner_id');
         });
     }
 
